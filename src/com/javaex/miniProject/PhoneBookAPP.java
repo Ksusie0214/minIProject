@@ -90,9 +90,9 @@ public class PhoneBookAPP {
 				FileWriter fw = new FileWriter("C:\\javaStudy\\PhoneDB.txt");
 				BufferedWriter bw = new BufferedWriter(fw);
 				
-				for(int i = 0; i<pList.size(); i++) {
-					
-					
+				for(Person p : pList) {
+					bw.write(p.getName()+","+p.getHp()+","+p.getCompany());
+					bw.newLine();
 				}
 				
 				bw.close();
@@ -110,6 +110,10 @@ public class PhoneBookAPP {
 				FileWriter fw = new FileWriter("C:\\javaStudy\\PhoneDB.txt");
 				BufferedWriter bw = new BufferedWriter(fw);
 				
+				for(Person p : pList) {
+					bw.write(p.getName()+p.getHp()+p.getCompany());
+					bw.newLine();
+				}
 				
 				
 				bw.close();
